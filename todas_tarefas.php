@@ -15,7 +15,7 @@
 		<script>
 			function editar(id, txt_tarefa){
 				let form =  document.createElement('form')
-					form.acrion = "#"
+					form.action = 'tarefa_controller.php?acao=atualizar'
 					form.method = 'POST'
 					form.className = 'row'
 
@@ -25,7 +25,7 @@
 					inputTarefa.className = 'col-9 form-control'
 					inputTarefa.value = txt_tarefa
 				
-				let inputId = createElement('input')
+				let inputId = document.createElement('input')
 					inputId.type = 'hidden'
 					inputId.name = 'id'
 					inputId.value = id
